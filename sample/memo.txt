@@ -1,0 +1,26 @@
+swagger.json -> asciidoc -> pdf
+
+1.convert to adoc
+$ java -jar ./swagger2markup-cli-1.3.1.jar convert -i [swagger.jsonへのパス] -d ./adoc
+
+2.convert to pdf
+$ cat adoc/overview.adoc adoc/paths.adoc adoc/definitions.adoc > adoc/out.adoc
+$ asciidoctor-pdf -o pdf/out.pdf adoc/out.adoc
+
+
+
+
+
+# build 
+1.javaインストール
+2.dockerインストール
+  -> ref: https://qiita.com/tkyonezu/items/0f6da57eb2d823d2611d
+3.docker-composeインストール
+  -> ref: https://qiita.com/zembutsu/items/dd2209a663cae37dfa81
+4.swagger構築
+  -> docker-compseの定義でswagger-editorとswagger-uiを構築
+  -> ref: http://igatea.hatenablog.com/entry/2018/02/21/120007
+5.PDF変換用ツール設定
+  -> swagger.json -> asciidoc は Swagger2Markup-Cli で変換
+  -> asciidoc -> html は asciidoctor で変換
+  -> ref: https://blog.makotoishida.com/2017/09/swaggerapipdf.html

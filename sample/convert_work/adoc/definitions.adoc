@@ -1,0 +1,95 @@
+
+[[_definitions]]
+== Definitions
+
+[[_aircraft]]
+=== Aircraft
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|Name|Description|Schema
+|**aircraft_id** +
+__optional__|ドローンID|integer (int64)
+|**name** +
+__optional__|ドローン名称|string
+|===
+
+
+[[_apiresponse]]
+=== ApiResponse
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**code** +
+__optional__|integer (int32)
+|**message** +
+__optional__|string
+|**type** +
+__optional__|string
+|===
+
+
+[[_error]]
+=== Error
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|Name|Description|Schema
+|**code** +
+__optional__|アプリ内エラーコード|integer (int32)
+|**message** +
+__optional__|エラーメッセージ|string
+|===
+
+
+[[_position]]
+=== Position
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|Name|Description|Schema
+|**alt** +
+__optional__|高度|integer (int64)
+|**lat** +
+__optional__|緯度|integer (int64)
+|**lon** +
+__optional__|経度|integer (int64)
+|**x-speed** +
+__optional__|スピード|integer (int64)
+|**y-speed** +
+__optional__|スピード|integer (int64)
+|**z-speed** +
+__optional__|スピード|integer (int64)
+|===
+
+
+[[_project]]
+=== Project
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|Name|Description|Schema
+|**aircrafts** +
+__optional__|管理するドローンID一覧|< <<_aircraft,Aircraft>> > array
+|**name** +
+__optional__|プロジェクト名|string
+|**project_id** +
+__optional__|プロジェクトID|integer (int64)
+|===
+
+
+[[_telemetory]]
+=== Telemetory
+
+[options="header", cols=".^3a,.^11a,.^4a"]
+|===
+|Name|Description|Schema
+|**aircraft_id** +
+__optional__|ドローンのID|integer (int64)
+|**positions** +
+__optional__||< <<_position,Position>> > array
+|===
+
+
+
