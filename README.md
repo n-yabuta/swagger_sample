@@ -2,4 +2,4 @@
 
 API documentation  
 
-https://n-yabuta.github.io/swagger-sample/
+https://n-yabuta.github.io/swagger_sample/
