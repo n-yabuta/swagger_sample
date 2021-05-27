@@ -1,0 +1,14 @@
+変換手順
+
+0.start.shの６行目を環境に合わせてパスを設定
+docker run -it --rm -v {dockerのディレクトリをマウントするディレクトリのフルパス}:/documents/ asciidoctor/docker-asciidoctor
+
+1.カレントディクレトリにHTML、PDFに変換するyamlファイルを格納する
+
+2.start.shを実行
+# sh ./start.sh
+
+3.dockerが起動するのでそのままconvert.shを実行
+# sh ./convert.sh
+
+4.(0)で設定した{dockerのディレクトリをマウントするディレクトリのフルパス}に変換後のHTMLとPDFが出力される
